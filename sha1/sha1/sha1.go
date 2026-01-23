@@ -48,11 +48,7 @@ func Hash(key []byte) []byte {
 			// wrapping additions
 			tmp := bits.RotateLeft32(a, 5) + f + e + k + v
 
-			e = d
-			d = c
-			c = bits.RotateLeft32(b, 30)
-			b = a
-			a = tmp
+			e, d, c, b, a = d, c, bits.RotateLeft32(b, 30), a, tmp
 		}
 
 		h0, h1, h2, h3, h4 = h0+a, h1+b, h2+c, h3+d, h4+e
