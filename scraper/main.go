@@ -12,7 +12,7 @@ import (
 // https://apps.ilsos.gov/businessentitysearch/businessentitysearch
 func main() {
 	kmz := kmz.NewKMZ()
-	file, err := os.ReadFile("./scrapper/test.kmz")
+	file, err := os.ReadFile("test.kmz")
 	if err != nil {
 		log.Panicf("failed toread test file: %v", err)
 	}
