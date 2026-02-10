@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"log"
 	"os"
+	"scrapper/pdl"
 
 	"github.com/twpayne/go-kml"
 	"github.com/twpayne/go-kmz"
@@ -43,4 +44,6 @@ func main() {
 	}
 
 	os.WriteFile("test_gen.kmz", w.Bytes(), 0644)
+
+	pdl.GetFromList()
 }
