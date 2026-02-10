@@ -6,7 +6,6 @@ import (
 	"os"
 	"scrapper/pdl"
 
-	"github.com/twpayne/go-kml"
 	"github.com/twpayne/go-kmz"
 )
 
@@ -16,26 +15,7 @@ import (
 // https://developers.google.com/kml/documentation/kmlreference
 func main() {
 	kmz := kmz.NewKMZ(
-		kml.Folder(
-			kml.Name("this is folder"),
-			kml.Placemark(
-				kml.Name("Simple placemark"),
-				kml.Description("Attached to the ground. Intelligently places itself at the height of the underlying terrain."),
-				kml.Point(
-					kml.Coordinates(kml.Coordinate{Lon: -122.0822035425683, Lat: 37.42228990140251}),
-				),
-			),
-		),
-		kml.Folder(
-			kml.Name("this is folder2"),
-			kml.Placemark(
-				kml.Name("Simple placemark"),
-				kml.Description("Attached to the ground. Intelligently places itself at the height of the underlying terrain."),
-				kml.Point(
-					kml.Coordinates(kml.Coordinate{Lon: -122.0822035425683, Lat: 37.42228990140251}),
-				),
-			),
-		),
+		pdl.GetFromList()...,
 	)
 
 	w := &bytes.Buffer{}
@@ -43,7 +23,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	os.WriteFile("test_gen.kmz", w.Bytes(), 0644)
+	os.WriteFile("./scraper/test_gen.kmz", w.Bytes(), 0644)
 
 	pdl.GetFromList()
 }
