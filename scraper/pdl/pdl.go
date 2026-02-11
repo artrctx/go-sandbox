@@ -60,14 +60,17 @@ func readFromFile(dir string) LocList {
 }
 
 func readFromCached(dir string) LocList {
-	cachedDir := "./scraper/pdl/cahced.json"
+	cachedDir := "./scraper/pdl/cached.json"
 	_, err := os.Stat(cachedDir)
 	if err == nil {
 		return readFromFile(cachedDir)
 	}
+	log.Fatal("Why not used cached")
 
 	readLoc := readFromFile(dir)
 	for idx, p := range readLoc.Data {
+		fmt.Println("getting geo location for", p.Name)
+
 		loc := geocode.GetLocFromAddr(fmt.Sprintf("%s,%s,%s %s", p.Location.Street1, p.Location.State, p.Location.PostalCode, p.Location.Country))
 
 		readLoc.Data[idx].Lat = loc.Lat
@@ -107,7 +110,7 @@ func GetFromList() []kml.Element {
 			compEls = append(compEls, e)
 		}
 
-		els = append(els, kml.Folder(v...))
+		els = append(els, kml.Folder(compEls...))
 	}
 
 	return els

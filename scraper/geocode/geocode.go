@@ -2,6 +2,7 @@ package geocode
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 
@@ -17,7 +18,8 @@ type Loc struct {
 var client *maps.Client
 
 func GetLocFromAddr(addr string) Loc {
-	if client != nil {
+	if client == nil {
+		fmt.Println(os.Getenv("GOOGLE_API_KEY"))
 		c, err := maps.NewClient(maps.WithAPIKey(os.Getenv("GOOGLE_API_KEY")))
 		if err != nil {
 			log.Panicf("failed to create maps client %v", err)

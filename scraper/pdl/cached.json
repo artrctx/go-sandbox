@@ -1,0 +1,384 @@
+{
+  "data": [
+    {
+      "name": "kotra chicago (official)",
+      "display_name": "KOTRA CHICAGO (Official)",
+      "founded": 1962,
+      "industry": "government administration",
+      "industry_v2": "government administration",
+      "location": {
+        "street_address": "111 east wacker drive",
+        "address_line_2": "",
+        "postal_code": "60601",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "",
+      "summary": "kotra, korea trade investment promotion agency, is a government agency of korea within the ministry of trade, industry and energy to promote, facilitate, monitor and regulate business and investment activities to and from korea.\nestablished in 1962, kotra has 125 korea business centers in 85 countries helping organization, institutions and individuals to do more business in and out of korea.\n\nfor additional questions, please contact us at info@kotrachicago.com or 312-644-4323. \n\n\nkorea business center chicago\nwww.kotrachicago.com\n111 e. wacker dr. suite 2229 chicago, il 60601\nt 312.644.4323 | f 312.644.4879 \n\n\nthis material is distributed by kotra on behalf of the korea trade-investment promotion agency. additional information is available at the department of justice, washington, dc.",
+      "headline": "Korea Trade-Investment Promotion Agency",
+      "lat": 41.8873702,
+      "lng": -87.6235549
+    },
+    {
+      "name": "korea medical",
+      "display_name": "Korea Medical",
+      "founded": 2019,
+      "industry": "health, wellness and fitness",
+      "industry_v2": "wellness and fitness services",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "koreamedical.com",
+      "summary": "the medical tourism source of best plastic and cosmetic surgery providers in south korea.",
+      "headline": "The medical tourism source of best plastic and cosmetic surgery providers in South Korea.",
+      "lat": 41.88325,
+      "lng": -87.6323879
+    },
+    {
+      "name": "wellstay, inc.",
+      "display_name": "Wellstay, Inc.",
+      "founded": 2017,
+      "industry": "international affairs",
+      "industry_v2": "international affairs",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "60614",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "wellstayusa.com",
+      "summary": "wellstay is a company that services institutions of any kind or size seeking to grow their international korean student population, as well as, develop partnerships, programs and awareness in south korea.    \n\nthings we do in south korea: \n- offer recruiting programs and tours for institutions \n- support students who want to travel, study, volunteer or intern in korea\n- host international auditions and/portfolio reviews \n- offer language and high school exchange programs in korea. \n- educate on korean culture, study and travel trends. \n- host or present at overseas study and travel talks/discussions.\n\nthings we do in the u.s.:\n- provide services to incoming students or professionals with relocation services in mid-west america. \n- group or individual airport pickup services \n-  speak at or host events on study, living and working in korea\n\ncurrent clients:\n- the university of wisconsin - stout\n- columbia college chicago \n- kendall college\n- illinois institute of technology - international certificate programs\n- midwest career college\n- eastwest university \n\nthe future of wellstay: \n- provide media content on korean higher ed culture, study, and travel by winter 2019.",
+      "headline": "",
+      "lat": 41.9203468,
+      "lng": -87.6433139
+    },
+    {
+      "name": "chicago international children’s film festival",
+      "display_name": "Chicago International Children’s Film Festival",
+      "founded": 0,
+      "industry": "motion pictures and film",
+      "industry_v2": "movies, videos and sound",
+      "location": {
+        "street_address": "1517 west fullerton avenue",
+        "address_line_2": "",
+        "postal_code": "60614",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "cicff.org",
+      "summary": "the california international canine freedom foundation is dedicated to ending the dogs for meat trade in thailand, korea and china. our mission is to support",
+      "headline": "",
+      "lat": 41.9250703,
+      "lng": -87.6665489
+    },
+    {
+      "name": "the korean american association of chicago",
+      "display_name": "The Korean American Association of Chicago",
+      "founded": 1962,
+      "industry": "individual & family services",
+      "industry_v2": "individual and family services",
+      "location": {
+        "street_address": "5941 north lincoln avenue",
+        "address_line_2": "",
+        "postal_code": "60659",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "koreachicago.org",
+      "summary": "the korean american association of chicago (kaac) was first founded in 1963 with the primary goal of ensuring the welfare of korean americans, and the korean american community in chicagoland. while the association promotes unity within the community, it introduces and increases awareness of korean culture to other ethnic groups within the u.s. the association serves as the information center to the korean american community, providing necessary counsel, regarding u.s. culture, economy, education system, social services, and politics. the association provides a bridge for the korean american community and mainstream u.s. society and businesses, promotes the city of chicago to korea, and contributes to increase public relations between the u.s. and korea.",
+      "headline": "",
+      "lat": 41.9893978,
+      "lng": -87.7050701
+    },
+    {
+      "name": "divided families usa",
+      "display_name": "Divided Families USA",
+      "founded": 0,
+      "industry": "",
+      "industry_v2": "",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "60646",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "dividedfamiliesusa.org",
+      "summary": "divided families usa is a national coalition of volunteers whose vision is to facilitate closure for elderly korean americans who have been separated from their family members in north korea as a result of the korean war. also known as the national coalition for divided families in the past following the release of the divided families documentary in 2014, dfusa seeks to work with the community of first generation korean american divided families to: \n\n1. advocate for a sustainable system of reunions and exchange of information for first generation korean americans with their direct relatives in north korea;\n2. record and archive oral histories of korean american divided families through intergenerational storytelling;\n3. account for the demographics of korean american divided families through a private registry.",
+      "headline": "",
+      "lat": 41.9920835,
+      "lng": -87.7615726
+    },
+    {
+      "name": "hangry joe's chicagoland hot chicken",
+      "display_name": "Hangry Joe's Chicagoland Hot Chicken",
+      "founded": 2022,
+      "industry": "restaurants",
+      "industry_v2": "restaurants",
+      "location": {
+        "street_address": "1811 west north avenue",
+        "address_line_2": "",
+        "postal_code": "60622",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "mt-biz.com",
+      "summary": "the hangriest chicken sandwich in chicagoland \n\nwelcome to hangry joe's hot chicken in chicagoland - your ultimate destination for mouth-watering, authentic nashville hot chicken. having delighted foodies across the globe, from the east to the west coast, dubai, and korea, hangry joe's is now ready to spice up lynchburg's culinary scene with our premium, never frozen unrivaled chicken dishes.",
+      "headline": "Welcome to Hangry Joe's Hot Chicken in Wicker Park, the home of premium, unrivaled Nashville Hot Chicken & Wings.",
+      "lat": 41.9102058,
+      "lng": -87.6731999
+    },
+    {
+      "name": "andrew bae gallery",
+      "display_name": "Andrew Bae Gallery",
+      "founded": 1990,
+      "industry": "fine art",
+      "industry_v2": "artists and writers",
+      "location": {
+        "street_address": "300 west superior street",
+        "address_line_2": "",
+        "postal_code": "60654",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "andrewbaegallery.com",
+      "summary": "andrew bae gallery is located in the heart of the river north arts district in downtown chicago. since 1990, the gallery has been dedicated to introducing contemporary works by asian artists, primarily with ties to korea, japan, and china. since its inception, the gallery has successfully established recognition from unfamiliar eyes and minds of collectors and museums around the world.",
+      "headline": "",
+      "lat": 41.8957274,
+      "lng": -87.63598569999999
+    },
+    {
+      "name": "choc choc cosmetics",
+      "display_name": "Choc Choc Cosmetics",
+      "founded": 2015,
+      "industry": "cosmetics",
+      "industry_v2": "personal care product manufacturing",
+      "location": {
+        "street_address": "3127 north broadway street",
+        "address_line_2": "",
+        "postal_code": "60657",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "chocchocusa.com",
+      "summary": "choc choc cosmetics is a small korean cosmetics retailer based in chicago, il. we have an online store as well as our brick and mortar that carries a carefully curated collection of products from some of the most popular k-beauty brands. choc choc also has its own in house line of skincare products formulated by the ceo and manufactured in korea.",
+      "headline": "Choc Choc means \"well moisturized skin\" in Korean. We are here to help you Stay Choc Choc",
+      "lat": 41.9383809,
+      "lng": -87.6441237
+    },
+    {
+      "name": "tmaxsoft uk",
+      "display_name": "TmaxSoft UK",
+      "founded": 2013,
+      "industry": "computer software",
+      "industry_v2": "software development",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "",
+      "summary": "better technology. better tomorrow.\r\n\r\nwith an 18 year company history, nearly 750 employees, and over us$75 million in sales, tmaxsoft has successfully delivered improved it performance across the globe to enterprise and governmental customers. as the largest independent software company in south korea, tmaxsoft’s products provide the quality and performance demanded by traditional as well as private and hybrid cloud architectures. \r\n\r\ntmaxsoft offers a wide range of data centre infrastructure software solutions. openframe is a mainframe modernisation solution that converts single tier, mainframe applications to multi-tiered, cloud-ready x86 architectures without change to the applications; it has attained the market leader position in japan. our powerful and secure jeus middleware product, part of our web application framework, is deployed on almost half of all web servers in south korea. tibero, tmaxsoft’s enterprise sql database, provides the data security, data resiliency, and rdbms compatibility necessary for large scale enterprise applications at  significantly lower costs than the competition. \r\n\r\nwith our extensive experience optimising deployment infrastructures for both local and worldwide applications, tmaxsoft provides solutions that save money, deploy quickly, and are supported by a world class professional services and support team.",
+      "headline": "",
+      "lat": 41.88325,
+      "lng": -87.6323879
+    },
+    {
+      "name": "citilaw group llc.",
+      "display_name": "Citilaw Group LLC.",
+      "founded": 2005,
+      "industry": "law practice",
+      "industry_v2": "law practice",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "",
+      "summary": "citlaw group llc, is one of the most reputable professional law corporations in the greater chicago area, recognized for its expertise in major practice areas such as international business and trade, and corporate immigration. established in 2005, we have grown rapidly through the years, in pace with the ever-evolving multi-national business settings.to date, we have represented many established corporations, including well-established multinational corporations, as well as younger companies, based in the u.s., south korea and in south american nations.",
+      "headline": "",
+      "lat": 41.88325,
+      "lng": -87.6323879
+    },
+    {
+      "name": "pandarismo, llc",
+      "display_name": "Pandarismo, LLC",
+      "founded": 0,
+      "industry": "automotive",
+      "industry_v2": "",
+      "location": {
+        "street_address": "222 west merchandise mart",
+        "address_line_2": "suite 1225",
+        "postal_code": "60654",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "pandarismo.com",
+      "summary": "pandarismo.com is a new digital marketing company for foreigners(specific for china, japan and korea) to review, buy and sell cars in north america. through technology and professional insights we create a new platform and community in na automotive industry, helping new immigrants and international students familiar with modern car shopping behavior in united states. our exclusive dealerships gain access to a variety innovative online and mobile marketing solutions that help them connect with and influence our community. pandarismo heavily utilize social media network and cutting edge technology to ensure our customer receive the best solution market could offer.",
+      "headline": "",
+      "lat": 41.8884096,
+      "lng": -87.6354498
+    },
+    {
+      "name": "alpha kappa alpha sorority, incorporated",
+      "display_name": "Alpha Kappa Alpha Sorority, Incorporated",
+      "founded": 1908,
+      "industry": "civic & social organization",
+      "industry_v2": "civic and social organizations",
+      "location": {
+        "street_address": "5656 south stony island avenue",
+        "address_line_2": "",
+        "postal_code": "60637",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "aka1908.com",
+      "summary": "alpha kappa alpha sorority, inc. (aka) is an international service organization that was founded on the campus of howard university in washington, d.c. in 1908.  it is the oldest greek-letter organization established by african-american college-educated women. alpha kappa alpha is comprised of more than 300,000 members in more than 1000 graduate and undergraduate chapters in the united states, liberia, the bahamas, the u.s. virgin islands, germany, south korea, bermuda, japan, canada, and south africa.  led by international president & ceo danette anthony reed, alpha kappa alpha is often hailed as “america’s premier greek-letter organization for african-american women.”",
+      "headline": "",
+      "lat": 41.7918881,
+      "lng": -87.58707869999999
+    },
+    {
+      "name": "emsi consulting llc",
+      "display_name": "EMSI Consulting LLC",
+      "founded": 1985,
+      "industry": "management consulting",
+      "industry_v2": "business consulting and services",
+      "location": {
+        "street_address": "1340 north astor street",
+        "address_line_2": "#2205",
+        "postal_code": "60610",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "emsiconsultinginc.com",
+      "summary": "effective management systems international (emsi) consulting llc is a multilingual/multicultural management consulting firm headquartered in chicago, il with offices in los angeles, florida and peru. we specialize in the area of human resources management and labor relations issues and have provided professional consultant services to many clients both in the u.s. and internationally (canada, mexico and south korea). our \"hands-on\" approach to the completion of assignment is the key element to obtaining a true understanding of the issues involved and in securing the goals of the project. our services are prepared and carried out with full management involvement and with the understanding that- our goals and yours are mutual!",
+      "headline": "",
+      "lat": 41.9069457,
+      "lng": -87.6284328
+    },
+    {
+      "name": "rxraven",
+      "display_name": "rxraven",
+      "founded": 2024,
+      "industry": "",
+      "industry_v2": "business intelligence platforms",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "rxraven.com",
+      "summary": "rxraven is hatched out of an idea of matching the right life sciences professionals with the right job opportunities in the ever-evolving hiring landscape globally. we aim to become the leading online platform for job seekers and employers to connect and find their perfect match efficiently!\n\n\"rx\" technically reflects the market we service, while \"raven\" is a highly intelligent species renowned for its problem-solving skill and impressive memory, which mirrors our ai and algorithms, engineering the best approaches and adapting user's preference.\n\nour mission is to provide a user-friendly and efficient way for industry professionals and hiring companies to connect, in north america, greater china, southeast asia, japan, south korea, oceania, europe and beyond!",
+      "headline": "Your Prescription for Success!",
+      "lat": 41.88325,
+      "lng": -87.6323879
+    },
+    {
+      "name": "perilla fare",
+      "display_name": "PERILLA fare",
+      "founded": 2019,
+      "industry": "restaurants",
+      "industry_v2": "restaurants",
+      "location": {
+        "street_address": "401 north milwaukee avenue",
+        "address_line_2": "",
+        "postal_code": "60654",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "perillachicago.com",
+      "summary": "at perilla, our food is centered around a communal dining experience. inspired by korean flavors and ingredients, we offer our approach on many traditional classics, korean bbq, and modern korean dishes paired alongside new and exciting takes created by chef andrew lim to represent the second generation of korean americans and the food we love to enjoy and share.\n\nperilla is named after a plant native to korea and many east asian countries. it is known to be very adaptable and grows vigorously on any soil. the name is an homage to our parents who are first generation immigrants that traveled to foreign land and rooted themselves on new soil, providing the foundation necessary for our generation to thrive.",
+      "headline": "To respectfully introduce and represent our cuisine and culture with passion and attention to detail",
+      "lat": 41.889418,
+      "lng": -87.6445196
+    },
+    {
+      "name": "lofbomm visual labs",
+      "display_name": "Lofbomm Visual Labs",
+      "founded": 2005,
+      "industry": "fine art",
+      "industry_v2": "artists and writers",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "60616",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "lofbommvisuallabs.com",
+      "summary": "adam lofbomm is a visual artist who works primarily in photographic-based mixed media. originally hailing from nashville, tennessee, adam grew up with two multidisciplinary artists for parents, but is otherwise self-taught. he has lived in annapolis, boston, san francisco, and seoul, south korea. during the decade he spent in seoul, he created and directed laughing tree gallery and laughing tree lab, two alternative art/performance spaces. at a seoul museum of art residency in 2010, he began fusing urban textures and street art with the human form by means of incorporating video projection into his studio shoots. now a resident of the chicago arts district, adam is currently preparing to exhibit a new body of work in the coming months.",
+      "headline": "",
+      "lat": 41.8403395,
+      "lng": -87.6137011
+    },
+    {
+      "name": "seva global",
+      "display_name": "Seva Global",
+      "founded": 2020,
+      "industry": "management consulting",
+      "industry_v2": "business consulting and services",
+      "location": {
+        "street_address": "",
+        "address_line_2": "",
+        "postal_code": "",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "seva-global.com",
+      "summary": "seva global is a cultural competency advisory firm that helps organizations do culturally competent business. by educating your teams with a variety of workshops that build cultural confidence, seva global can help you grow your business.\n\nwe work with companies of all sizes and industries, as understanding diverse perspectives is essential in today's world.. from sales to operations to human resources, leadership or front-line employees, we can help elevate your team's cultural competence.\n\nour customized services include: \n- cultural presentations\n- webinars\n- speaking engagements\n- consultations\n \nseva global offers many cultural workshops including but not limited to: \n- country 101s: brazil, canada, china, germany, india and indian weddings, japan, jewish culture and social events, lgbtq+ and lgbtq+ weddings, mexico, south korea, united arab emirates, united states, or we will be happy to prepare and customize a culture of your choice\n- growing business through understanding cultures\n- cultural celebrations\n- planning with a global mindset",
+      "headline": "Growing Business Through Cultural Competency",
+      "lat": 41.88325,
+      "lng": -87.6323879
+    },
+    {
+      "name": "paul preissner architects, limited",
+      "display_name": "Paul Preissner Architects, Limited",
+      "founded": 2006,
+      "industry": "architecture & planning",
+      "industry_v2": "architecture and planning",
+      "location": {
+        "street_address": "1033 west 14th place",
+        "address_line_2": "",
+        "postal_code": "60608",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "paulpreissner.com",
+      "summary": "paul preissner architects is an idea-based design office founded in 2006. the office achieved international notoriety through its commitment to novel shapes, materials, and innovative organizations for building program. drawing its expertise from architecture, academia, and art and design, we approach every project with an intellectual discipline and artistic openness that allows for novel solutions to projects of every size and any budget. we search for projects and clients that share our ambitions and obsessions concerning the formalized world regardless of scale, location or typology.\r\n\r\npaul preissner architects has worked on projects ranging from workstation and furniture design for the cincinnati art museum to the planning of a central park district for a new administrative city in south korea. recent projects from the office include a daycare facility for developmentally disabled adults in beer sheba, israel, a central library for helsinki finland, exhibition design for the nextart chicago art fair.",
+      "headline": "",
+      "lat": 41.8622927,
+      "lng": -87.6528421
+    },
+    {
+      "name": "garrett popcorn shops®",
+      "display_name": "Garrett Popcorn Shops®",
+      "founded": 1949,
+      "industry": "food & beverages",
+      "industry_v2": "food and beverage services",
+      "location": {
+        "street_address": "401 north michigan avenue",
+        "address_line_2": "suite 1700",
+        "postal_code": "60611",
+        "locality": "chicago",
+        "country": "united states"
+      },
+      "website": "garrettpopcorn.com",
+      "summary": "garrett popcorn shops® - a chicago tradition from the usa since 1949 \n\nsince 1949, garrett popcorn shops serves gourmet popcorn using wholesome ingredients in their secret family recipes, passed down for generations. custom grown, non-gmo kernels are first hot-air popped, then enriched with flavor in seasoned, old-fashioned copper kettles. because good things take time, garrett popcorn is only handcrafted in small batches throughout the day for ultimate freshness.\n\nin addition to limited time, seasonal flavours, garrett signature recipes include: caramelcrisp® (which can be selected with nuts), cheesecorn, buttery (a vegan treat), plain and the famous garrett mix® – the original chicago-style popcorn, which blends the sophisticated sweetness of caramelcrisp® with the savoury goodness of cheesecorn.\n\ngarrett enchants adoring fans around the world.  in addition to 13 locations in hometown chicago, garrett popcorn shops also has shops in las vegas, detroit, atlanta, dallas, washington d.c, dubai, singapore, hong kong, malaysia, japan, thailand and south korea.\n\ngarrett popcorn shops.  like no other®",
+      "headline": "Garrett Popcorn Shops.  Like No Other®",
+      "lat": 41.8896224,
+      "lng": -87.6228785
+    }
+  ]
+}
