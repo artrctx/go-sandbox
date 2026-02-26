@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SSE Test Dashboard</title>
+    <style>
+      body {
+        font-family: monospace;
+        background: #111217;
+        color: #e5e7eb;
+        padding: 2rem;
+      }
+      h1 {
+        color: #3b82f6;
+      }
+      .connected {
+        color: #10b981;
+      }
+      .disconnected {
+        color: #ef4444;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 600px;
+      }
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #1f2937;
+      }
+      th {
+        color: #6b7280;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+      .price {
+        font-weight: bold;
+        color: #f59e0b;
+      }
+      .time {
+        color: #6b7280;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Real-Time Stock Dashboard</h1>
+    <div id="status" class="disconnected">Disconnected</div>
+    <div id="log"></div>
+
+    <script>
+      const source = new EventSource("/events");
+
+      source.onopen = () => {
+        document.getElementById("status").textContent = "Connected";
+        document.getElementById("status").className = "connected";
+      };
+
+      source.addEventListener("message", (e) => {
+        console.log(e)
+        appendLog(`id:${e.lastEventId} ${e.data}`);
+      });
+
+      source.onerror = () => {
+        document.getElementById("status").textContent = "Reconnecting...";
+        document.getElementById("status").className = "disconnected";
+      };
+
+      function appendLog(msg) {
+        const log = document.getElementById("log");
+        log.innerHTML = `<div>${msg}</div>` + log.innerHTML;
+        if (log.children.length > 50) log.lastChild.remove();
+      }
+    </script>
+  </body>
+</html>

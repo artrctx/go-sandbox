@@ -6,4 +6,5 @@ use (
 	./playground
 	./sha1
 	./scraper
+	./sse
 )
