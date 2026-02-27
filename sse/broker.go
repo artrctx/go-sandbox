@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"strings"
 	"sync"
 )
 
@@ -21,18 +22,22 @@ type Event struct {
 }
 
 func (e Event) format() string {
-	var s string
+	var s strings.Builder
 	if e.ID != "" {
-		s += fmt.Sprintf("id: %s\n", e.ID)
+		s.WriteString(fmt.Sprintf("id: %s\n", e.ID))
 	}
+
 	if e.Event != "" {
-		s += fmt.Sprintf("event: %s\n", e.Event)
+		s.WriteString(fmt.Sprintf("event: %s\n", e.Event))
 	}
+
 	if e.Retry > 0 {
-		s += fmt.Sprintf("retry: %d\n", e.Retry)
+		s.WriteString(fmt.Sprintf("retry: %d\n", e.Retry))
 	}
-	s += fmt.Sprintf("data: %s\n\n", e.Data)
-	return s
+
+	s.WriteString(fmt.Sprintf("data: %s\n\n", e.Data))
+
+	return s.String()
 }
 
 type Broker struct {
