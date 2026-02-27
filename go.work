@@ -7,4 +7,5 @@ use (
 	./sha1
 	./scraper
 	./sse
+	./bittor
 )
