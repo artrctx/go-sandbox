@@ -88,6 +88,9 @@ func (c *Client) Read() (*message.Message, error) {
 	return message.Read(c.Conn)
 }
 
-// func (c *Client) SendRequest(idx, begin, length int) error {
-
-// }
+// send request to peer
+func (c *Client) SendRequest(idx, begin, length int) error {
+	req := message.FormatRequest(idx, begin, length)
+	_, err := c.Conn.Write(req.Serialize())
+	return err
+}

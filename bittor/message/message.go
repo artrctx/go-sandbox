@@ -47,7 +47,7 @@ type Message struct {
 }
 
 // Creates Request Msg
-func FormatRequet(idx, begin, length int) Message {
+func FormatRequest(idx, begin, length int) Message {
 	// 4 byte idx + 4 byte begin + 4 byte length
 	payload := make([]byte, 12)
 	binary.BigEndian.AppendUint32(payload[:4], uint32(idx))
