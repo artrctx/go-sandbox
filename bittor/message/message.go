@@ -2,6 +2,7 @@ package message
 
 import (
 	"encoding/binary"
+	"fmt"
 	"io"
 )
 
@@ -45,6 +46,60 @@ type Message struct {
 	Payload []byte
 }
 
+// Creates Request Msg
+func FormatRequet(idx, begin, length int) Message {
+	// 4 byte idx + 4 byte begin + 4 byte length
+	payload := make([]byte, 12)
+	binary.BigEndian.AppendUint32(payload[:4], uint32(idx))
+	binary.BigEndian.AppendUint32(payload[4:8], uint32(begin))
+	binary.BigEndian.AppendUint32(payload[8:], uint32(length))
+	return Message{MsgRequest, payload}
+}
+
+// Creates Have Msg
+func FormatHave(idx int) Message {
+	payload := make([]byte, 4)
+	binary.BigEndian.AppendUint32(payload, uint32(idx))
+	return Message{MsgHave, payload}
+}
+
+// parse Piece message and copy payload to buf
+func ParsePiece(idx int, buf []byte, msg *Message) (int, error) {
+	if msg.ID != MsgPiece {
+		return 0, fmt.Errorf("expected Piece ID (%d) but got ID %v", MsgPiece, msg.ID)
+	}
+
+	if len(msg.Payload) < 8 {
+		return 0, fmt.Errorf("payload too short. %d < 8", len(msg.Payload))
+	}
+
+	parsedIdx := int(binary.BigEndian.Uint32(msg.Payload[:4]))
+	if parsedIdx != idx {
+		return 0, fmt.Errorf("expected index %d, got %d", idx, parsedIdx)
+	}
+	begin := int(binary.BigEndian.Uint32(msg.Payload[4:8]))
+	if begin >= len(buf) {
+		return 0, fmt.Errorf("begin offset too high. %d >= %d", begin, len(buf))
+	}
+	data := msg.Payload[8:]
+	if (len(data) + begin) > len(buf) {
+		return 0, fmt.Errorf("Data too long [%d] for offset %d with length %d", len(data), begin, len(buf))
+	}
+	copy(buf[begin:], msg.Payload[8:])
+	return len(data), nil
+}
+
+// parses Have message and return index
+func ParseHave(msg *Message) (int, error) {
+	if msg.ID != MsgHave {
+		return 0, fmt.Errorf("expected Have ID (%d) but got ID %v", MsgHave, msg.ID)
+	}
+	if len(msg.Payload) != 4 {
+		return 0, fmt.Errorf("xpected payload length 4 but got length %d", len(msg.Payload))
+	}
+	return int(binary.BigEndian.Uint32(msg.Payload)), nil
+}
+
 // Serialize serializes a message into a buffer of the form
 // <length prefix><message ID><payload>
 // Interprets `nil` as a keep-alive message
@@ -83,4 +138,39 @@ func Read(r io.Reader) (*Message, error) {
 		Payload: msgBuf[1:],
 	}, nil
 
+}
+
+func (m *Message) name() string {
+	if m == nil {
+		return "KeepAlive"
+	}
+	switch m.ID {
+	case MsgChoke:
+		return "Choke"
+	case MsgUnchoke:
+		return "Unchoke"
+	case MsgInterested:
+		return "Interested"
+	case MsgNotInterested:
+		return "NotInterested"
+	case MsgHave:
+		return "Have"
+	case MsgBitfield:
+		return "Bitfield"
+	case MsgRequest:
+		return "Request"
+	case MsgPiece:
+		return "Piece"
+	case MsgCancel:
+		return "Cancel"
+	default:
+		return fmt.Sprintf("Unknown%d", m.ID)
+	}
+}
+
+func (m *Message) String() string {
+	if m == nil {
+		return m.name()
+	}
+	return fmt.Sprintf("%s [%d]", m.name(), len(m.Payload))
 }

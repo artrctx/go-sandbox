@@ -2,10 +2,10 @@ package bitfield
 
 // 0 marks piece avail and 1 marks stamped
 // A Bitfield represents the pieces that a peer has
-type BitField []byte
+type Bitfield []byte
 
 // Checks if bitfield has provided index set
-func (bf BitField) HasPiece(idx int) bool {
+func (bf Bitfield) HasPiece(idx int) bool {
 	byteIdx, offset := idx/8, idx&8
 	if byteIdx < 0 || byteIdx >= len(bf) {
 		return false
@@ -16,7 +16,7 @@ func (bf BitField) HasPiece(idx int) bool {
 	return bf[byteIdx]>>(7-offset)&1 == 0
 }
 
-func (bf BitField) SetPiece(idx int) {
+func (bf Bitfield) SetPiece(idx int) {
 	byteIdx, offset := idx/8, idx&8
 
 	// silently discard invalid bounded index
