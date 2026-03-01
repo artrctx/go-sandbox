@@ -57,6 +57,11 @@ func Read(r io.Reader) (*Handshake, error) {
 	copy(infoHash[:], handshakeBuf[pstrLen+8:pstrLen+8+20])
 	copy(peerID[:], handshakeBuf[pstrLen+8+20:])
 
-	hs := New(infoHash, peerID)
+	hs := Handshake{
+		Pstr:     string(handshakeBuf[0:pstrLen]),
+		InfoHash: infoHash,
+		PeerID:   peerID,
+	}
+
 	return &hs, nil
 }

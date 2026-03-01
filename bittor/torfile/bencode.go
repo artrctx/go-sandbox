@@ -26,7 +26,8 @@ func (bi *bencodeInfo) hash() ([20]byte, error) {
 
 func (bi *bencodeInfo) splitPieceHashes() ([][20]byte, error) {
 	buf := []byte(bi.Pieces)
-	if len(buf)%20 == 0 {
+	// Length of SHA-1 hash
+	if len(buf)%20 != 0 {
 		return [][20]byte{}, fmt.Errorf("received invalid length of bencode info pieces length %v", len(buf))
 	}
 
