@@ -64,6 +64,7 @@ func FormatHave(idx int) Message {
 }
 
 // parse Piece message and copy payload to buf
+// returns copied length to buf or error
 func ParsePiece(idx int, buf []byte, msg *Message) (int, error) {
 	if msg.ID != MsgPiece {
 		return 0, fmt.Errorf("expected Piece ID (%d) but got ID %v", MsgPiece, msg.ID)

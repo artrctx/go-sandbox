@@ -1,24 +1,20 @@
 package torfile
 
 import (
+	"bittor/p2p"
 	"crypto/rand"
 	"os"
-	"time"
 
 	"github.com/jackpal/bencode-go"
 )
 
-const (
-	PieceHashSize        = 20
-	Port          uint16 = 6881
-)
+// Port to listen on
+const Port uint16 = 6881
 
 type File struct {
 	Announce    string
-	Comment     string
-	CreatedAt   time.Time
-	InfoHash    [PieceHashSize]byte
-	PieceHashes [][PieceHashSize]byte
+	InfoHash    [20]byte
+	PieceHashes [][20]byte
 	PieceLength int
 	Length      int
 	Name        string
@@ -31,7 +27,7 @@ func Read(path string) (File, error) {
 	}
 	defer file.Close()
 
-	var bt bencodeTorrent
+	bt := bencodeTorrent{}
 	if err := bencode.Unmarshal(file, &bt); err != nil {
 		return File{}, err
 	}
@@ -40,9 +36,38 @@ func Read(path string) (File, error) {
 }
 
 func (f *File) Download(path string) error {
-	var peerID [PieceHashSize]byte
+	var peerID [20]byte
 	// This never returns error
 	rand.Read(peerID[:])
 
+	//? PORT NEEDS TO BE DYNAMIC
+	peers, err := f.requestPeers(peerID, Port)
+	if err != nil {
+		return err
+	}
+
+	tor := p2p.Torrent{
+		Peers:       peers,
+		PeerID:      peerID,
+		InfoHash:    f.InfoHash,
+		PieceHashes: f.PieceHashes,
+		PieceLength: f.PieceLength,
+		Length:      f.Length,
+		Name:        f.Name,
+	}
+	buf, err := tor.Download()
+	if err != nil {
+		return err
+	}
+
+	outFile, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	defer outFile.Close()
+
+	if _, err := outFile.Write(buf); err != nil {
+		return err
+	}
 	return nil
 }

@@ -15,7 +15,7 @@ import (
 type Client struct {
 	Conn     net.Conn
 	Choked   bool
-	BitField bitfield.Bitfield
+	Bitfield bitfield.Bitfield
 	peer     peer.Peer
 	infoHash [20]byte
 	peerID   [20]byte
@@ -56,7 +56,7 @@ func recvBitField(conn net.Conn) (bitfield.Bitfield, error) {
 }
 
 // New connects with a peer, completes a handshake, and receives a handshake
-func New(peer peer.Peer, infoHash, peerID [20]byte) (*Client, error) {
+func New(peer peer.Peer, peerID, infoHash [20]byte) (*Client, error) {
 	// Timeout set to 3 seconds
 	conn, err := net.DialTimeout("tcp", peer.String(), 3*time.Second)
 	if err != nil {
@@ -76,7 +76,7 @@ func New(peer peer.Peer, infoHash, peerID [20]byte) (*Client, error) {
 	return &Client{
 		Conn:     conn,
 		Choked:   true,
-		BitField: bf,
+		Bitfield: bf,
 		peer:     peer,
 		infoHash: infoHash,
 		peerID:   peerID,
@@ -88,7 +88,35 @@ func (c *Client) Read() (*message.Message, error) {
 	return message.Read(c.Conn)
 }
 
-// send request to peer
+// send unchoke message to peer (ID: 1)
+func (c *Client) SendUnchoke() error {
+	msg := message.Message{ID: message.MsgUnchoke}
+	_, err := c.Conn.Write(msg.Serialize())
+	return err
+}
+
+// send interested message to peer (ID: 2)
+func (c *Client) SendInterested() error {
+	msg := message.Message{ID: message.MsgInterested}
+	_, err := c.Conn.Write(msg.Serialize())
+	return err
+}
+
+// send notinterested message to peer (ID: 3)
+func (c *Client) SendNotInterested() error {
+	msg := message.Message{ID: message.MsgNotInterested}
+	_, err := c.Conn.Write(msg.Serialize())
+	return err
+}
+
+// send have message to peer (ID: 4)
+func (c *Client) SendHave() error {
+	msg := message.Message{ID: message.MsgHave}
+	_, err := c.Conn.Write(msg.Serialize())
+	return err
+}
+
+// send request message to peer (ID: 6)
 func (c *Client) SendRequest(idx, begin, length int) error {
 	req := message.FormatRequest(idx, begin, length)
 	_, err := c.Conn.Write(req.Serialize())

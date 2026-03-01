@@ -19,3 +19,6 @@
 
 # env file
 .env
+
+# test file
+debian-13.3.0-amd64-netinst.iso.torrent

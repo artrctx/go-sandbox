@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"crypto/sha1"
 	"fmt"
-	"time"
 
 	"github.com/jackpal/bencode-go"
 )
@@ -17,37 +16,35 @@ type bencodeInfo struct {
 }
 
 // marshalls info to byte array and hashes with sha1
-func (bi *bencodeInfo) hash() ([PieceHashSize]byte, error) {
+func (bi *bencodeInfo) hash() ([20]byte, error) {
 	var bs bytes.Buffer
 	if err := bencode.Marshal(&bs, *bi); err != nil {
-		return [PieceHashSize]byte{}, err
+		return [20]byte{}, err
 	}
 	return sha1.Sum(bs.Bytes()), nil
 }
 
-func (bi *bencodeInfo) splitPieceHashes() ([][PieceHashSize]byte, error) {
+func (bi *bencodeInfo) splitPieceHashes() ([][20]byte, error) {
 	buf := []byte(bi.Pieces)
-	if len(buf)%PieceHashSize == 0 {
-		return [][PieceHashSize]byte{}, fmt.Errorf("received invalid length of bencode info pieces length %v", len(buf))
+	if len(buf)%20 == 0 {
+		return [][20]byte{}, fmt.Errorf("received invalid length of bencode info pieces length %v", len(buf))
 	}
 
-	numHashes := len(buf) / PieceHashSize
+	numHashes := len(buf) / 20
 
-	hashes := make([][PieceHashSize]byte, numHashes)
+	hashes := make([][20]byte, numHashes)
 
 	for idx := range numHashes {
-		strtIdx := idx * PieceHashSize
-		copy(hashes[idx][:], buf[strtIdx:strtIdx+PieceHashSize])
+		strtIdx := idx * 20
+		copy(hashes[idx][:], buf[strtIdx:strtIdx+20])
 	}
 
 	return hashes, nil
 }
 
 type bencodeTorrent struct {
-	Announce     string      `bencode:"announce"`
-	Comment      string      `bencode:"comment"`
-	CreationDate time.Time   `bencode:"creation date"`
-	Info         bencodeInfo `bencode:"info"`
+	Announce string      `bencode:"announce"`
+	Info     bencodeInfo `bencode:"info"`
 }
 
 func (bt bencodeTorrent) toFile() (File, error) {
@@ -61,8 +58,6 @@ func (bt bencodeTorrent) toFile() (File, error) {
 	}
 	return File{
 		Announce:    bt.Announce,
-		Comment:     bt.Comment,
-		CreatedAt:   bt.CreationDate,
 		Name:        bt.Info.Name,
 		InfoHash:    hash,
 		PieceHashes: pieces,
