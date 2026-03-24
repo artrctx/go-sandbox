@@ -9,4 +9,5 @@ use (
 	./scraper
 	./sha1
 	./sse
+	./num_recog
 )
