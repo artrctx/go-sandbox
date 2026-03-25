@@ -68,9 +68,40 @@ func ReadImageFile(path string) (*ImageData, error) {
 	}
 
 	size := n * w * h
-	d := ImageData{n, w, h, make([]byte, size)}
+	d := &ImageData{n, w, h, make([]byte, size)}
 	len, err := file.Read(d.Data)
 	if err != nil || size != len {
 		return nil, fileError(file)
 	}
+
+	return d, nil
+}
+
+type LabelData struct {
+	N    int
+	Data []byte
+}
+
+func ReadLabelFile(path string) (*LabelData, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer f.Close()
+
+	magic, err := readInt32(f)
+	if err != nil || magic != LabelFileMagic {
+		return nil, fileError(f)
+	}
+
+	n, err := readInt32(f)
+	if err != nil {
+		return nil, fileError(f)
+	}
+
+	d := &LabelData{n, make([]byte, n)}
+	if len, err := f.Read(d.Data); err != nil || len != n {
+		return nil, fileError(f)
+	}
+	return d, nil
 }
