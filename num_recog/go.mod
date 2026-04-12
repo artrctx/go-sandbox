@@ -2,4 +2,4 @@ module num_recog
 
 go 1.26.1
 
-require golang.org/x/sync v0.20.0 // indirect
+require golang.org/x/sync v0.20.0
