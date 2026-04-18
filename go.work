@@ -1,13 +1,14 @@
-go 1.26.1
+go 1.26.2
 
 use (
 	./bittor
 	./grpc
 	./grpc_client
 	./load_balance
+	./num_recog
 	./playground
 	./scraper
 	./sha1
 	./sse
-	./num_recog
+	./finetune
 )
