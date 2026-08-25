@@ -31,7 +31,7 @@ func main() {
 	settings := commandline.CreateContextSettingsFlag(ctx, "")
 	klog.InitFlags(nil)
 	flag.Parse()
-	ps := check1(commandline.ParseContextSettings(ctx, *settings))
+	_ = check1(commandline.ParseContextSettings(ctx, *settings))
 
 	if err := exceptions.TryCatch[error](func() {
 		if *flagPreGenerate {
