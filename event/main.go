@@ -34,6 +34,7 @@ func gracefulShutdown(srv *http.Server, done chan<- struct{}) {
 	}
 
 	slog.Info("Server exiting")
+
 	done <- struct{}{}
 }
 
