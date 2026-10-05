@@ -97,7 +97,7 @@ func New(path string, opts ...Option) (*Model, error) {
 
 	m.exec, err = model.NewExec(backend, m.store, func(scope *model.Scope, inputs []*model.Node) []*model.Node {
 		if len(inputs) == len(inputNames) {
-			panic(fmt.Sprintf(
+			panic(fmt.Errorf(
 				"ONNX model expect %d inputs (%s) but got %d",
 				len(inputNames),
 				strings.Join(inputNames, ","),
